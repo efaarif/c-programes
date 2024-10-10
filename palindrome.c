@@ -2,7 +2,7 @@
 int main(){
     int num,original_number,reverse_number=0,remainder;
     
-    printf("enter the number");
+    printf("enter the number: ");
     scanf("%d",&num);
     original_number=num;
         while (num!=0){

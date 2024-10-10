@@ -1,49 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 100 // Maximum size of the stack
+#define MAX 100 
 
-// Stack structure
 struct Stack {
     int arr[MAX];
     int top;
 };
 
-// Function to initialize the stack
 void initStack(struct Stack* s) {
-    s->top = -1; // Stack is empty
+    s->top = -1; 
 }
 
-// Function to check if the stack is full
 int isFull(struct Stack* s) {
     return s->top == MAX - 1;
 }
 
-// Function to check if the stack is empty
 int isEmpty(struct Stack* s) {
     return s->top == -1;
 }
 
-// Function to push an element onto the stack
 void push(struct Stack* s, int value) {
     if (isFull(s)) {
         printf("Stack Overflow! Cannot push %d\n", value);
         return;
     }
-    s->arr[++s->top] = value; // Increment top and add value
+    s->arr[++s->top] = value; 
     printf("Pushed %d onto the stack.\n", value);
 }
 
-// Function to pop an element from the stack
 int pop(struct Stack* s) {
     if (isEmpty(s)) {
         printf("Stack Underflow! Cannot pop from an empty stack.\n");
-        return -1; // Return -1 to indicate failure
+        return -1; 
     }
-    return s->arr[s->top--]; // Return top value and decrement top
+    return s->arr[s->top--]; 
 }
 
-// Function to display the elements of the stack
 void display(struct Stack* s) {
     if (isEmpty(s)) {
         printf("Stack is empty.\n");
@@ -57,7 +50,7 @@ void display(struct Stack* s) {
 
 int main() {
     struct Stack stack;
-    initStack(&stack); // Initialize the stack
+    initStack(&stack); 
 
     int choice, value;
 

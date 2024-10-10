@@ -1,16 +1,18 @@
 #include <stdio.h>
 
-#define MAX 10 // Maximum size of the matrix
+#define MAX 10 /
 
 int main() {
-    int matrix1[MAX][MAX], matrix2[MAX][MAX], sum[MAX][MAX];
-    int rows, cols, i, j;
-
-    // Input the dimensions of the matrices
+	int rows, cols, i, j;
+    
+    
     printf("Enter the number of rows and columns: ");
     scanf("%d %d", &rows, &cols);
+    int matrix1[rows][cols];
+	int matrix2[rows][cols];
+	int sum[rows][cols];
+    
 
-    // Input elements of the first matrix
     printf("Enter elements of the first matrix:\n");
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
@@ -19,7 +21,6 @@ int main() {
         }
     }
 
-    // Input elements of the second matrix
     printf("Enter elements of the second matrix:\n");
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
@@ -28,14 +29,12 @@ int main() {
         }
     }
 
-    // Adding the two matrices
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
             sum[i][j] = matrix1[i][j] + matrix2[i][j];
         }
     }
 
-    // Displaying the result
     printf("Sum of the two matrices:\n");
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
